@@ -36,12 +36,11 @@ public class WandController : MonoBehaviour
         if (wandObject != null && pickup == null)
         {
             wandObject.transform.position = this.transform.position;
-            // TODO: not hard code transform position and
-            // explicitly check for object names ... T_T
+            // TODO: not hard code transform position
             wandObject.transform.Rotate(180, 0, 0);
             float _x = (float)(-0.1);
             float _z = (float)(0.2);
-            if (wandObject.gameObject.name == "glove_right")
+            if (this.gameObject.name == "Controller (right)")
             {
                 wandObject.transform.Translate(_x, 0, _z);
             } else
